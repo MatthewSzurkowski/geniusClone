@@ -1,0 +1,60 @@
+body {
+    background-color: #79a3b1;
+}
+
+
+#search-bar{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#info {
+    visibility: hidden;
+    background-color: #d0e8f2;
+    margin-top: 5%;
+    border: 3px solid black;
+    border-radius: 25% 2% 25% 2%;
+    padding: 5% 0% 0% 0%;
+}
+
+#ArtistName {
+    background-color: #fcf8ec; 
+    border: 2px solid black;
+}
+
+#songContainer{
+    margin-top: 5%;
+}
+
+#horzLineSongs{
+    width: 90%;
+    visibility: hidden;
+}
+
+#songsTitle{
+    text-align: center;
+    visibility: hidden;
+}
+
+#songContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#songContainer > * {
+    flex: 1 0 21%;
+}
+
+
+.hoverEffect{
+    transition: background-color 0.5s ease;
+    background-color: white;
+    text-align: center;
+    padding: 2%;
+    border-radius: 5%;
+    border: 1px solid black;
+}
+
+.hoverEffect:hover{
+    background-color: greenyellow;
+}

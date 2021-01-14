@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang=“en”>
+<head>
+    <meta charset = “UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src= "js/js.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title></title>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 20%;"><u>geniusClone</u></h1>
+    <p class="lead" style="text-align: center; margin-top: 5%;">Search for your favourite artists top songs with lyrics!</p>
+    <p class="lead" style="text-align: center;">Songs via Last.fm & lyrics via lyrics.ovh.</p>
+    <div class="container" id="search-bar">
+        <label for="ArtistName">Artist name:</label>
+        <input type="text" id="ArtistName">
+        <button id="search-button" onclick="getInfo()">Submit</button>
+    </div>
+
+    <div class="container" id="info">
+        <div class="row">
+            <div class="container col-sm" id= "infoBox"></div>
+        </div>
+    </div>
+
+    <hr id="horzLineSongs">
+    <div class="container" id="titleHolder">
+        <h2 id="songsTitle"><u>Songs</u></h1>
+    </div>
+    <div class="container">
+        <div id="songContainer"></div>
+    </div>
+
+    <script>
+        // Make sure this code gets executed after the DOM is loaded.
+        document.querySelector("#ArtistName").addEventListener("keyup", event => {
+            if(event.key !== "Enter") return; // Use `.key` instead.
+            document.querySelector("#search-button").click(); // Things you want to do.
+            event.preventDefault(); // No need to `return false;`.
+        });
+    </script>
+</body>
+</html>
